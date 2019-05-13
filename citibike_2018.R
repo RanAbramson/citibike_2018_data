@@ -1,4 +1,3 @@
-```
 library(plyr)
 library(tidyverse)
 library(data.table)
@@ -6,11 +5,12 @@ library(ggmap)
 library(curl)
 
 
-
 # get all the zip files
+
 zipF <- list.files(path = "C:/Users/Ran/Desktop/citibike/CitibikeNYC_2018", pattern = "*.zip", full.names = TRUE)
 
 # unzip all files
+
 ldply(.data = zipF, .fun = unzip, exdir = "C:/Users/Ran/Desktop/citibike/CitibikeNYC_2018")
 
 #Setting working directory
@@ -296,10 +296,3 @@ e_stations_map <- ggmap(nycmap, extent = "device", base_layer = ggplot
 s_stations_map + geom_point(alpha = 0.7)
 
 e_stations_map + geom_point(alpha = 0.7)
-
-```
-
-
-  
-
-
